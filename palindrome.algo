@@ -1,0 +1,36 @@
+ALGORITHM algorithm_name
+VAR
+    set_declarations
+    mot: chaine de caractères
+    debut,fin:caractères
+BEGIN
+    set_instructions
+    Afficher("Veuillez entrer um mot, mais tout en miniscule")
+    lire(mot)
+    
+    // Fonction pour tester si un mot est un palindrome
+    Fonction Palindrome(mot):entier
+        // Initialisation des indices de début et de fin
+        debut == 0
+        fin == taille(mot) - 1
+
+        // Boucle jusqu'à ce que les indices se croisent
+        Tant que début < fin Faire
+            // Comparaison des caractères correspondants
+            Si mot[début] ≠ mot[fin] Alors
+            // Le mot n'est pas un palindrome
+            Afficher("Le mot n'est pas un palindrome")
+            Fin Si
+            
+            // Déplacement des indices vers le centre
+            début == début + 1
+            fin == fin - 1
+            
+        Fin Tant Que
+
+        // Si la boucle se termine, le mot est un palindrome
+        Afficher("le mot est un palindrome")
+    Fin Fonction
+
+    
+END
